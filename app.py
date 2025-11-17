@@ -62,7 +62,6 @@ df['balance'] = ((-df.amount).cumsum() + BALANCE).shift(fill_value=BALANCE)
 
 st.dataframe(
     df[['date', 'time','amount','balance']].sort_values('time', ascending=False),
-    width='content',
     height=800,
     hide_index=True,
     column_config={
